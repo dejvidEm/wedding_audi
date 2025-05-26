@@ -155,7 +155,7 @@ Každý záber bude štýlový, každý moment nezabudnuteľný.
                     playsInline
                     poster="/placeholder.svg?height=560&width=280&query=luxury wedding car vertical mobile"
                   >
-                    <source src="/videos/video.mp4" type="video/mp4" />
+                    <source src="/videos/video2.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
                   </video>
 
