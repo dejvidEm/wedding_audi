@@ -61,7 +61,7 @@ export default function WeddingHero() {
       <motion.div style={{ y: contentY }} className="relative z-10 flex h-full items-center justify-center">
         <div className="text-center max-w-4xl mx-auto mt-24 px-8">
           {/* Clean Typography */}
-          <h1 className="text-6xl md:text-xl lg:text-7xl font-bold text-white mb-8 leading-[0.85] overflow-visible">
+          <h1 className="text-4xl md:text-xl lg:text-7xl font-bold text-white mb-8 sm:leading-[0.85] overflow-visible">
             <span
               className={`block transition-all duration-2000 ease-out ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-24"}`}
               style={{ transitionDelay: "0.3s" }}

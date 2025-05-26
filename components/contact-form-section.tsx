@@ -181,7 +181,7 @@ export function ContactFormSection() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-foreground mb-1">Telefón</h4>
-                  <p className="text-muted-foreground">+421 900 123 456</p>
+                  <p className="text-muted-foreground">+421 904 999 311</p>
                   <p className="text-sm text-muted-foreground">Pondelok - Piatok: 9:00 - 18:00</p>
                 </div>
               </div>
@@ -199,7 +199,7 @@ export function ContactFormSection() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-foreground mb-1">Email</h4>
-                  <p className="text-muted-foreground">kontakt@weddingaudi.sk</p>
+                  <p className="text-muted-foreground">info@weddingaudi.sk</p>
                   <p className="text-sm text-muted-foreground">Odpovieme do 24 hodín</p>
                 </div>
               </div>
