@@ -33,7 +33,7 @@ description="Luxusná limuzína Audi S8 spája komfort, výkon a ladný dizajn. 
         />
       </TextParallaxContent>
       <TextParallaxContent
-        imgUrl="/photos/23.webp"
+        imgUrl="/photos/tretia.jpg"
         subheading="Performance"
         heading="Tailored. Timeless. Thrilling."
       >
