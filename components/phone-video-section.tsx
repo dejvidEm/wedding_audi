@@ -153,7 +153,13 @@ Každý záber bude štýlový, každý moment nezabudnuteľný.
                     muted
                     loop
                     playsInline
+                    preload="auto"
                     poster="/placeholder.svg?height=560&width=280&query=luxury wedding car vertical mobile"
+                    onError={(e) => {
+                      console.error('Video loading error:', e);
+                      const videoElement = e.target as HTMLVideoElement;
+                      videoElement.style.display = 'none';
+                    }}
                   >
                     <source src="/videos/video2.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
