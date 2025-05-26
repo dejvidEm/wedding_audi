@@ -161,7 +161,7 @@ Každý záber bude štýlový, každý moment nezabudnuteľný.
                       videoElement.style.display = 'none';
                     }}
                   >
-                    <source src="/videos/video2.mp4" type="video/mp4" />
+                    <source src="/videos/video2.webm" type="video/mp4" />
                     Your browser does not support the video tag.
                   </video>
 
