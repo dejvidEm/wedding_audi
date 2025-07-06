@@ -1,13 +1,12 @@
 "use client"
 
-import { useState, useRef } from "react"
+import { useRef } from "react"
 import { motion, useScroll, useTransform } from "framer-motion"
-import { Play, Pause } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
+import Image from "next/image"
 
 export function PhoneVideoSection() {
-  const [isPlaying, setIsPlaying] = useState(true)
   const sectionRef = useRef<HTMLDivElement>(null)
 
   const { scrollYProgress } = useScroll({
@@ -19,18 +18,6 @@ export function PhoneVideoSection() {
   const phoneRotate = useTransform(scrollYProgress, [0, 0.5, 1], [-8, 0, 8])
   const phoneScale = useTransform(scrollYProgress, [0, 0.3, 0.7, 1], [0.9, 1, 1, 0.9])
   const textOpacity = useTransform(scrollYProgress, [0, 0.3, 0.7, 1], [0, 1, 1, 0])
-
-  const toggleVideo = () => {
-    const video = document.getElementById("phone-video") as HTMLVideoElement
-    if (video) {
-      if (isPlaying) {
-        video.pause()
-      } else {
-        video.play()
-      }
-      setIsPlaying(!isPlaying)
-    }
-  }
 
   return (
     <section
@@ -145,37 +132,17 @@ Každý záber bude štýlový, každý moment nezabudnuteľný.
                   {/* Front Camera */}
                   <div className="absolute top-2.5 left-1/2 transform -translate-x-1/2 translate-x-8 w-2 h-2 bg-gray-800 rounded-full z-30"></div>
 
-                  {/* Video */}
-                  <video
-                    id="phone-video"
-                    className="absolute inset-0 w-full h-full object-cover rounded-[2.2rem]"
-                    autoPlay
-                    muted
-                    loop
-                    playsInline
-                    preload="auto"
-                    poster="/placeholder.svg?height=560&width=280&query=luxury wedding car vertical mobile"
-                    onError={(e) => {
-                      console.error('Video loading error:', e);
-                      const videoElement = e.target as HTMLVideoElement;
-                      videoElement.style.display = 'none';
-                    }}
-                  >
-                    <source src="/videos/video2.webm" type="video/mp4" />
-                    Your browser does not support the video tag.
-                  </video>
+                  {/* Image */}
+                  <Image
+                    src="/photos/main4.webp"
+                    alt="Luxury Audi S8 wedding car"
+                    fill
+                    className="object-cover rounded-[2.2rem]"
+                    priority
+                  />
 
-                  {/* Video Overlay */}
+                  {/* Image Overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-black/10 rounded-[2.2rem]"></div>
-
-                  {/* Play/Pause Button */}
-                  <button
-                    onClick={toggleVideo}
-                    className="absolute bottom-8 right-6 bg-white/20 backdrop-blur-sm border border-white/30 rounded-full p-3 text-white hover:bg-white/30 transition-all duration-300 z-20"
-                    aria-label={isPlaying ? "Pause video" : "Play video"}
-                  >
-                    {isPlaying ? <Pause className="h-4 w-4" /> : <Play className="h-4 w-4" />}
-                  </button>
 
                   {/* Status Bar */}
                   <div className="absolute top-12 left-6 right-6 flex justify-between items-center text-white text-xs z-20 font-medium">
