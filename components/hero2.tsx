@@ -61,18 +61,28 @@ export default function WeddingHero() {
       <motion.div style={{ y: contentY }} className="relative z-10 flex h-full items-center justify-center">
         <div className="text-center max-w-4xl mx-auto mt-24 px-8">
           {/* Clean Typography */}
-          <h1 className="text-4xl md:text-xl lg:text-7xl font-bold text-white mb-8 sm:leading-[0.85] overflow-visible">
+          <h1 className="text-white mb-8 sm:leading-[0.85] overflow-visible">
             <span
-              className={`block transition-all duration-2000 ease-out ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-24"}`}
+              className={`block text-6xl md:text-6xl lg:text-8xl transition-all duration-2000 ease-out font-great-vibes font-normal ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-24"}`}
               style={{ transitionDelay: "0.3s" }}
             >
               Elegancia,
             </span>
             <span
-              className={`block text-primary font-black italic transition-all duration-2000 ease-out transform-gpu ${isLoaded ? "opacity-100 translate-y-0 scale-100" : "opacity-0 translate-y-24 scale-95"}`}
+              className={`block text-4xl md:text-4xl lg:text-5xl text-primary font-bold italic transition-all duration-2000 ease-out transform-gpu ${isLoaded ? "opacity-100 translate-y-0 scale-100" : "opacity-0 translate-y-24 scale-95"}`}
               style={{ transitionDelay: "0.8s", willChange: "transform" }}
             >
               ktorú počuť aj cítiť.
+            </span>
+            <span
+              className={`block text-white/80 font-light text-sm md:text-base lg:text-lg mt-8 mb-12 transition-all duration-2000 ease-out ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-16"}`}
+              style={{ transitionDelay: "1.1s" }}
+            >
+              <div className="inline-block px-4 py-2 rounded-full border border-white/30 bg-white/5 backdrop-blur-sm">
+                <span className="bg-gradient-to-r from-transparent via-white/20 to-transparent h-px w-full block mb-1"></span>
+                Audi S8 Plus
+                <span className="bg-gradient-to-r from-transparent via-white/20 to-transparent h-px w-full block mt-1"></span>
+              </div>
             </span>
           </h1>
 
@@ -118,7 +128,7 @@ export default function WeddingHero() {
 
       {/* Simple Scroll Indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white/40 animate-bounce">
-        <div className="w-px h-8 bg-white/30 rounded-full"></div>
+        <ArrowRight className="h-8 w-8 rotate-90 text-white/30" />
       </div>
     </motion.div>
   )

@@ -37,14 +37,14 @@ export function Header({ activeSection }: HeaderProps) {
         isScrolled ? "bg-white/70 backdrop-blur-sm shadow-sm" : "bg-transparent"
       }`}
     >
-      <div className="container flex h-16 items-center justify-between">
-        <div className="flex items-center gap-2 font-bold">
+      <div className={`container flex items-center justify-between transition-all duration-300 ${isScrolled ? "h-16 pt-2" : "h-20 pt-4"}`}>
+        <div className="flex items-center gap-2 font-bold pt-2">
           <Image
             src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot_2025-05-20_at_22.44.33-removebg-preview-v05dT0MnwJmO8v9Fb9j7yxE3topCe6.png"
             alt="Wedding Audi Logo"
-            width={120}
-            height={40}
-            className="h-8 w-auto"
+            width={240}
+            height={70}
+            className={`w-auto transition-all duration-300 ${isScrolled ? "h-12" : "h-20"}`}
           />
         </div>
         <div className="hidden md:flex items-center gap-8">

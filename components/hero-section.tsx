@@ -38,13 +38,6 @@ export function HeroSection() {
             height: `calc(100% + ${Math.abs(videoParallax * 0.3)}px)`,
           }}
         >
-          <video className="absolute inset-0 w-full h-full object-cover" autoPlay muted loop playsInline>
-            <source
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Video%202025-05-19%20at%2019.46.09%20%28online-video-cutter.com%29-WMjMByPq3FUiTCuuja99JB5Iweihgh.mp4"
-              type="video/mp4"
-            />
-            Your browser does not support the video tag.
-          </video>
         </div>
       </div>
 
@@ -85,9 +78,9 @@ export function HeroSection() {
           <Badge className="mb-4 rounded-full px-4 py-1.5 text-sm font-medium" variant="secondary">
             Prenájom svadobných áut
           </Badge>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight mb-6 md:mb-8">
-            <span className="text-white md:text-foreground">Váš </span>
-            <span className="text-white md:text-black">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl tracking-tight mb-6 md:mb-8">
+            <span className="text-white md:text-foreground font-bold">Váš </span>
+            <span className="text-white md:text-black font-great-vibes">
               <span className="relative inline-block">
                 Dokonalý
                 <span
@@ -131,7 +124,7 @@ export function HeroSection() {
             </div>
             <div className="flex items-center gap-1 text-white md:text-muted-foreground">
               <Check className="size-3 sm:size-4 text-primary" />
-              <span>Profesionálny šofér</span>
+              <span>Mladý elegantný šofér</span>
             </div>
           </div>
         </motion.div>

@@ -30,7 +30,7 @@ export function FeaturesSection() {
     },
     {
       title: "Profesionálny šofér",
-      description: "Profesionálny, upravený a reprezentatívny šofér k vašim službám",
+      description: "Mladý, elegantný a štýlový šofér, ktorý doplní váš svadobný deň svojou profesionálnosťou a reprezentatívnym vzhľadom",
       icon: <BarChart className="size-5" />,
     },
     {

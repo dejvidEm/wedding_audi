@@ -19,7 +19,7 @@ export function FaqSection() {
     {
       question: "Je v cene zahrnutý šofér?",
       answer:
-        "Áno, všetky naše balíčky zahŕňajú profesionálneho šoféra s dlhoročnými skúsenosťami so svadobnými udalosťami.",
+        "Áno, všetky naše balíčky zahŕňajú mladého, elegantného a profesionálneho šoféra s dlhoročnými skúsenosťami so svadobnými udalosťami. Náš šofér je štýlový, reprezentatívny a vždy upravený.",
     },
     {
       question: "Ponúkate zľavy pre svadby mimo sezóny?",

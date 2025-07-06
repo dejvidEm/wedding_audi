@@ -1,9 +1,14 @@
 import type React from "react"
 import "@/styles/globals.css"
-import { Inter } from "next/font/google"
+import { Inter, Great_Vibes } from "next/font/google"
 import type { Metadata } from "next"
 
 const inter = Inter({ subsets: ["latin"] })
+const greatVibes = Great_Vibes({ 
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-great-vibes"
+})
 
 export const metadata: Metadata = {
   title: "Wedding Audi - Prenájom luxusnej svadobnej limuzíny",
@@ -19,7 +24,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${inter.className} ${greatVibes.variable}`}>{children}</body>
     </html>
   )
 }
