@@ -127,6 +127,7 @@ export function DroneServicesBanner() {
               <Button
                 size="lg"
                 className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 rounded-full shadow-lg hover:shadow-primary/30 transition-all duration-300 group transform hover:-translate-y-1"
+                onClick={() => document.getElementById('kontakt')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 Pridať do balíčka
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />

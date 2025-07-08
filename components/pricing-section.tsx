@@ -113,7 +113,7 @@ export function PricingSection() {
                           <Button
                             className={`w-full mt-auto rounded-full ${plan.popular ? "bg-primary hover:bg-primary/90" : "bg-muted hover:bg-muted/80"}`}
                             variant={plan.popular ? "default" : "outline"}
-                            onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
+                            onClick={() => document.getElementById("kontakt")?.scrollIntoView({ behavior: "smooth" })}
                           >
                             {plan.cta}
                           </Button>

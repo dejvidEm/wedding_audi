@@ -45,6 +45,8 @@ export function Header({ activeSection }: HeaderProps) {
             width={240}
             height={70}
             className={`w-auto transition-all duration-300 ${isScrolled ? "h-12" : "h-20"}`}
+            style={{ cursor: 'pointer' }}
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           />
         </div>
         <div className="hidden md:flex items-center gap-8">
@@ -60,6 +62,12 @@ export function Header({ activeSection }: HeaderProps) {
                       ? "text-muted-foreground hover:text-foreground"
                       : "text-foreground/90 hover:text-foreground"
                 }`}
+                onClick={e => {
+                  if (section !== 'kontakt') {
+                    e.preventDefault();
+                    document.getElementById(section)?.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
               >
                 {section === "sluzby"
                   ? "Služby"
@@ -77,7 +85,7 @@ export function Header({ activeSection }: HeaderProps) {
               </Link>
             ))}
           </nav>
-          <Button className="rounded-full">
+          <Button className="rounded-full" onClick={() => document.getElementById('kontakt')?.scrollIntoView({ behavior: 'smooth' })}>
             Kontaktujte nás
             <ChevronRight className="ml-1 size-4" />
           </Button>
@@ -105,7 +113,15 @@ export function Header({ activeSection }: HeaderProps) {
                 className={`py-2 text-sm font-medium ${
                   activeSection === section ? "text-foreground font-semibold" : ""
                 }`}
-                onClick={() => setMobileMenuOpen(false)}
+                onClick={e => {
+                  if (section !== 'kontakt') {
+                    e.preventDefault();
+                    document.getElementById(section)?.scrollIntoView({ behavior: 'smooth' });
+                    setMobileMenuOpen(false);
+                  } else {
+                    setMobileMenuOpen(false);
+                  }
+                }}
               >
                 {section === "sluzby"
                   ? "Služby"
@@ -123,7 +139,7 @@ export function Header({ activeSection }: HeaderProps) {
               </Link>
             ))}
             <div className="flex flex-col gap-2 pt-2 border-t">
-              <Button className="rounded-full">
+              <Button className="rounded-full" onClick={() => { setMobileMenuOpen(false); document.getElementById('kontakt')?.scrollIntoView({ behavior: 'smooth' }) }}>
                 Kontaktujte nás
                 <ChevronRight className="ml-1 size-4" />
               </Button>

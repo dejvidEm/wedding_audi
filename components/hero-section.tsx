@@ -100,7 +100,7 @@ export function HeroSection() {
           </h1>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-            <Button size="lg" className="group rounded-full h-12 px-6 sm:px-8 text-base">
+            <Button size="lg" className="group rounded-full h-12 px-6 sm:px-8 text-base" onClick={() => document.getElementById('kontakt')?.scrollIntoView({ behavior: 'smooth' })}>
               Rezervovať auto
               <ArrowRight className="ml-2 size-4 transition-transform duration-300 group-hover:translate-x-1" />
             </Button>

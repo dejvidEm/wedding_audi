@@ -137,7 +137,7 @@ const ExampleContent = ({
     <h2 className="col-span-1 text-3xl font-bold md:col-span-4">{title}</h2>
     <div className="col-span-1 md:col-span-8">
       <p className="mb-8 text-xl text-muted-foreground md:text-2xl">{description}</p>
-      <Button size="lg" className="group">
+      <Button size="lg" className="group" onClick={() => document.getElementById('kontakt')?.scrollIntoView({ behavior: 'smooth' })}>
         Naše balíčky{" "}
         <ArrowUpRight className="ml-2 size-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
       </Button>

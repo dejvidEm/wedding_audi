@@ -97,8 +97,8 @@ Každý záber bude štýlový, každý moment nezabudnuteľný.
                 ))}
               </div>
 
-              <Button size="lg" className="rounded-full bg-primary hover:bg-primary/90 px-8 group">
-                Kontaktuje Nás
+              <Button size="lg" className="rounded-full bg-primary hover:bg-primary/90 px-8 group" onClick={() => document.getElementById('kontakt')?.scrollIntoView({ behavior: 'smooth' })}>
+                Kontaktujte Nás
                 <motion.div
                   className="ml-2"
                   animate={{ x: [0, 4, 0] }}

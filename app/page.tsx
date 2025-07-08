@@ -57,7 +57,6 @@ export default function LandingPage() {
         <PhoneVideoSection />
         <GiftCardBanner />
         <HowItWorksSection />
-        <TestimonialsSection />
         <PricingSection />
         <DroneServicesBanner/>
         <FaqSection />
