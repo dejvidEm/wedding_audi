@@ -39,7 +39,7 @@ export default function WeddingHero() {
   return (
     <motion.div ref={heroRef} className="relative h-screen w-full overflow-hidden bg-black -mt-16">
       {/* Your Specific Video Background */}
-      <motion.div style={{ y: videoY }} className="absolute inset-0 opacity-70 w-full h-[120%] -top-[10%]">
+      <motion.div style={{ y: videoY }} className="absolute inset-0 opacity-50 w-full h-[120%] -top-[10%]">
         <video
           id="hero-video"
           className="absolute inset-0 h-full w-full object-cover"
@@ -102,14 +102,16 @@ export default function WeddingHero() {
             <Button
               size="lg"
               className="bg-primary hover:bg-primary/90 text-primary-foreground border-0 px-12 py-4 text-base font-medium tracking-wide rounded-full shadow-2xl hover:shadow-primary/30 hover:scale-105 transition-all duration-500 group transform hover:-translate-y-1"
+              onClick={() => document.getElementById('kontakt')?.scrollIntoView({ behavior: 'smooth' })}
             >
-              Rerezvovať teraz
+              Rezervovať teraz
               <ArrowRight className="ml-3 h-5 w-5 group-hover:translate-x-2 transition-transform duration-300" />
             </Button>
             <Button
               size="lg"
               variant="ghost"
               className="text-white/80 hover:text-white px-12 py-4 text-base font-light tracking-wide rounded-full border border-white/20 hover:border-white/40 backdrop-blur-sm hover:bg-white/5 transition-all duration-500 hover:scale-105 transform hover:-translate-y-1"
+              onClick={() => document.getElementById('cennik')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Balíčky
             </Button>

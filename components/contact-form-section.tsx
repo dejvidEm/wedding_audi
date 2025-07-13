@@ -223,8 +223,8 @@ export function ContactFormSection() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-foreground mb-1">Adresa</h4>
-                  <p className="text-muted-foreground">Svadobná 123</p>
-                  <p className="text-muted-foreground">811 04 Bratislava</p>
+                  <p className="text-muted-foreground">Mochovská 30</p>
+                  <p className="text-muted-foreground">934 05, Levice</p>
                 </div>
               </div>
 

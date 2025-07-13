@@ -100,7 +100,7 @@ export function ExhaustSection() {
           </p>
           <div className="flex justify-center">
             <a 
-              href="https://www.instagram.com/weddingaudi" 
+              href="https://www.instagram.com/weddingaudi.sk/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-8 py-3 rounded-full font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/30 flex items-center gap-2"

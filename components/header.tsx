@@ -40,7 +40,7 @@ export function Header({ activeSection }: HeaderProps) {
       <div className={`container flex items-center justify-between transition-all duration-300 ${isScrolled ? "h-16 pt-2" : "h-20 pt-4"}`}>
         <div className="flex items-center gap-2 font-bold pt-2">
           <Image
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot_2025-05-20_at_22.44.33-removebg-preview-v05dT0MnwJmO8v9Fb9j7yxE3topCe6.png"
+            src={"/photos/logo_new.png"}
             alt="Wedding Audi Logo"
             width={240}
             height={70}
@@ -59,8 +59,8 @@ export function Header({ activeSection }: HeaderProps) {
                   activeSection === section
                     ? "text-foreground font-semibold"
                     : isScrolled
-                      ? "text-muted-foreground hover:text-foreground"
-                      : "text-foreground/90 hover:text-foreground"
+                      ? "text-black hover:text-foreground"
+                      : "text-white hover:text-foreground"
                 }`}
                 onClick={e => {
                   if (section !== 'kontakt') {
