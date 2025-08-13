@@ -18,7 +18,7 @@ export function ExhaustSection() {
             Zvuk, ktorý <span className="text-primary">ohúri</span>
           </h2>
           <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
-            Náš custom exhaust systém vytvára jedinečný zvuk, ktorý doplní váš svadobný deň nezabudnuteľnou atmosférou
+            Náš namieru vytvorený výfukový systém vytvára jedinečný zvuk, ktorý doplní váš svadobný deň nezabudnuteľnou atmosférou
           </p>
         </motion.div>
 
@@ -36,7 +36,7 @@ export function ExhaustSection() {
                 <Settings className="w-8 h-8 text-primary" />
               </div>
               <h3 className="text-xl md:text-2xl font-bold text-white mb-4">
-                Custom Exhaust
+                Výfuk vytvorený na mieru
               </h3>
               <p className="text-gray-300 leading-relaxed">
                 Ručne vyrobený výfukový systém, ktorý poskytuje perfektnú rovnováhu medzi výkonom a elegantným zvukom
@@ -57,10 +57,10 @@ export function ExhaustSection() {
                 <Volume2 className="w-8 h-8 text-primary" />
               </div>
               <h3 className="text-xl md:text-2xl font-bold text-white mb-4">
-                Tuned Sound
+                Zvuk vyladený k dokonalosti
               </h3>
               <p className="text-gray-300 leading-relaxed">
-                Optimalizovaný zvuk motoru pre maximálny zážitok - od jemného burčania po mohutný ryk
+                Optimalizovaný zvuk motoru pre maximálny zážitok - od jemného burčania po mohutný hrubý zvuk
               </p>
             </div>
           </motion.div>

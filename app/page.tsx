@@ -54,7 +54,6 @@ export default function LandingPage() {
         <ExhaustSection />
         <FeaturesSection />
         <GallerySection />
-        <PhoneVideoSection />
         <GiftCardBanner />
         <HowItWorksSection />
         <PricingSection />

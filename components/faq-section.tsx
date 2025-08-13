@@ -12,11 +12,6 @@ export function FaqSection() {
         "Rezervácia je jednoduchá. Kontaktujte nás telefonicky alebo cez formulár, dohodneme si stretnutie a spoločne vyberieme ideálne vozidlo pre váš veľký deň. Rezerváciu potvrdíme zálohou.",
     },
     {
-      question: "Môžem si neskôr zmeniť typ vozidla?",
-      answer:
-        "Áno, zmeny sú možné až do 14 dní pred termínom svadby, v závislosti od dostupnosti vozidiel. Za zmeny môže byť účtovaný poplatok.",
-    },
-    {
       question: "Je v cene zahrnutý šofér?",
       answer:
         "Áno, všetky naše balíčky zahŕňajú mladého, elegantného a profesionálneho šoféra s dlhoročnými skúsenosťami so svadobnými udalosťami. Náš šofér je štýlový, reprezentatívny a vždy upravený.",
@@ -29,7 +24,7 @@ export function FaqSection() {
     {
       question: "Ako ďaleko môžeme cestovať?",
       answer:
-        "Poskytujeme služby po celom Slovensku. Pre vzdialenosti nad 100 km od Bratislavy môže byť účtovaný príplatok za dopravu.",
+        "Poskytujeme služby po celom Slovensku. Pre vzdialenosti nad 100 km od Levíc môže byť účtovaný príplatok za dopravu.",
     },
     {
       question: "Aký typ podpory ponúkate?",

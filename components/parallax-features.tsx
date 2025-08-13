@@ -14,8 +14,8 @@ export function ParallaxFeatures() {
     <div className="bg-background">
       <TextParallaxContent
         imgUrl="/photos/prva1.jpg"
-        subheading="Elegance"
-        heading="Unleashed with class."
+        subheading="Elegancia"
+        heading="Sebaistá a plná výkonu."
       >
         <ExampleContent
           title="Tvoríme nezabudnuteľné chvíle"
@@ -24,8 +24,8 @@ description="Doprajte si príchod na svadbu vo veľkom štýle. Naša Audi S8 s 
       </TextParallaxContent>
       <TextParallaxContent
         imgUrl="/photos/prva.webp"
-        subheading="Presence"
-        heading="Defined by distinction."
+        subheading="Prítomnosť"
+        heading="Definovaná jedinečnosťou."
       >
         <ExampleContent
           title="Štýl, ktorý ohúri"
@@ -34,8 +34,8 @@ description="Luxusná limuzína Audi S8 spája komfort, výkon a ladný dizajn. 
       </TextParallaxContent>
       <TextParallaxContent
         imgUrl="/photos/tretia.jpg"
-        subheading="Performance"
-        heading="Tailored. Timeless. Thrilling."
+        subheading="Výkon"
+        heading="Na mieru. Nadčasový. Strhujúci."
       >
         <ExampleContent
           title="Príchod, na ktorý sa nezabúda"
