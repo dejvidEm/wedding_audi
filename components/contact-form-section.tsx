@@ -1,7 +1,6 @@
 "use client"
 
 import type React from "react"
-
 import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
 import { CalendarIcon } from "lucide-react"
@@ -15,6 +14,7 @@ export function ContactFormSection() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [isClient, setIsClient] = useState(false)
+  const [error, setError] = useState<string | null>(null)
 
   useEffect(() => {
     setIsClient(true)
@@ -22,19 +22,33 @@ export function ContactFormSection() {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
+    setError(null)
     setIsSubmitting(true)
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1500))
+    const form = e.currentTarget
+    const fd = new FormData(form)
+    const payload = Object.fromEntries(fd.entries())
 
-    setIsSubmitting(false)
-    setIsSubmitted(true)
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      })
 
-    // Reset form after submission
-    e.currentTarget.reset()
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}))
+        throw new Error(data?.error || "Odoslanie zlyhalo")
+      }
 
-    // Reset success message after 5 seconds
-    setTimeout(() => setIsSubmitted(false), 5000)
+      setIsSubmitted(true)
+      form.reset()
+      setTimeout(() => setIsSubmitted(false), 5000)
+    } catch (err: any) {
+      setError(err?.message || "Ups, niečo sa pokazilo.")
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -52,32 +66,35 @@ export function ContactFormSection() {
               onSubmit={handleSubmit}
               className="space-y-4 bg-background p-6 rounded-xl border border-border/40 shadow-lg"
             >
+              {/* honeypot */}
+              <input type="text" name="_honeypot" className="hidden" tabIndex={-1} autoComplete="off" />
+
               <div>
                 <label htmlFor="name" className="block text-sm font-medium mb-2">
                   Celé meno
                 </label>
-                <Input id="name" placeholder="napr. Ján a Zuzana Novákovi" required className="bg-background" />
+                <Input id="name" name="name" placeholder="napr. Ján a Zuzana Novákovi" required className="bg-background" />
               </div>
 
               <div>
                 <label htmlFor="email" className="block text-sm font-medium mb-2">
                   Emailová adresa
                 </label>
-                <Input id="email" type="email" placeholder="priklad@email.com" required className="bg-background" />
+                <Input id="email" name="email" type="email" placeholder="priklad@email.com" required className="bg-background" />
               </div>
 
               <div>
                 <label htmlFor="phone" className="block text-sm font-medium mb-2">
                   Telefónne číslo
                 </label>
-                <Input id="phone" type="tel" placeholder="+421 900 123 456" className="bg-background" />
+                <Input id="phone" name="phone" type="tel" placeholder="+421 900 123 456" className="bg-background" />
               </div>
 
               <div>
                 <label htmlFor="venue" className="block text-sm font-medium mb-2">
                   Miesto svadby
                 </label>
-                <Input id="venue" placeholder="Názov miesta alebo lokácia" className="bg-background" />
+                <Input id="venue" name="venue" placeholder="Názov miesta alebo lokácia" className="bg-background" />
               </div>
 
               <div className="grid grid-cols-2 gap-4">
@@ -88,6 +105,7 @@ export function ContactFormSection() {
                   <div className="relative">
                     <Input
                       id="date"
+                      name="date"
                       type="date"
                       className={cn("bg-background pl-10", !isClient && "appearance-none")}
                     />
@@ -100,7 +118,7 @@ export function ContactFormSection() {
                     Čas svadby
                   </label>
                   <div className="relative">
-                    <Input id="time" type="time" className="bg-background" />
+                    <Input id="time" name="time" type="time" className="bg-background" />
                   </div>
                 </div>
               </div>
@@ -111,9 +129,11 @@ export function ContactFormSection() {
                 </label>
                 <Textarea
                   id="message"
+                  name="message"
                   placeholder="Povedzte nám o svojich svadobných plánoch a ako vám môžeme pomôcť..."
                   rows={4}
                   className="resize-none bg-background"
+                  required
                 />
               </div>
 
@@ -128,6 +148,11 @@ export function ContactFormSection() {
               {isSubmitted && (
                 <p className="text-sm text-green-600 text-center">
                   Ďakujeme za vašu správu! Čoskoro sa vám ozveme, aby sme prediskutovali váš výnimočný deň.
+                </p>
+              )}
+              {error && (
+                <p className="text-sm text-red-600 text-center">
+                  {error}
                 </p>
               )}
             </form>
